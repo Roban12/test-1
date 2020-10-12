@@ -1,0 +1,8 @@
+<?php
+/** \Onilab\Learning\Block\Widget\Test $block */
+?>
+<h3><?= $block->escapeHtml($block->getData('title')) ?></h3>
+<h3><?= $block->escapeHtml(__('Included:')) ?> <?= $block->escapeHtml($block->getData('included')) ?></h3>
+<?= $block->escapeHtml($block->getData('title')) ?>
+<?= $block->escapeHtml($block->getData('link')) ?>
+<?= $block->escapeHtml($block->getData('text')) ?>

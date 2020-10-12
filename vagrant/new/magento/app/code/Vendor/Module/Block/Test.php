@@ -8,8 +8,22 @@ use \Magento\Framework\View\Element\Template\Context;
 use \Vendor\Module\Helper\Data;
 use \Vendor\Module\Model\Example;
 class Test extends Template {
+    /**
+     * @var Data
+     */
 	public $helper;
+    /**
+     * @var Example
+     */
 	public $model;
+
+    /**
+     * Test constructor.
+     * @param Context $context
+     * @param Data $helper
+     * @param Example $model
+     * @param array $data
+     */
 	public function __construct(
 		Context $context,
 		Data $helper,
@@ -21,4 +35,3 @@ class Test extends Template {
         parent::__construct($context, $data);
 	}
 }
-?>

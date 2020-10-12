@@ -1,0 +1,94 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Vendor\Module\Block\Widget\Test" id="orange_test_widget">
+        <label>My New Widget</label>
+        <description>This is a test widget!!!</description>
+        <parameters>
+            <parameter name="included" xsi:type="select" visible="true" required="true" sort_order="5">
+                <label translate="true">Included</label>
+                <options>
+                    <option name="Off" value="Off" selected="true">
+                        <label>Off</label>
+                    </option>
+                    <option name="On" value="On">
+                        <label>On</label>
+                    </option>
+                </options>
+            </parameter>
+
+            <parameter name="show_title" xsi:type="select" visible="true" required="true" sort_order="10">
+                <label translate="true">Show title</label>
+                <options>
+                    <option name="show" value="show" selected="true">
+                        <label>show</label>
+                    </option>
+                    <option name="hide" value="hide">
+                        <label>hide</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="show_link" xsi:type="select" visible="true" required="true" sort_order="10">
+                <label translate="true">Show link</label>
+                <options>
+                    <option name="show" value="show" selected="true">
+                        <label>show</label>
+                    </option>
+                    <option name="hide" value="hide">
+                        <label>hide</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="show_text" xsi:type="select" visible="true" required="true" sort_order="10">
+                <label translate="true">Show text</label>
+                <options>
+                    <option name="show" value="show" selected="true">
+                        <label>show</label>
+                    </option>
+                    <option name="hide" value="hide">
+                        <label>hide</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="title" xsi:type="text" visible="true" required="true" sort_order="20">
+                <label translate="true">Title</label>
+                <depends>
+                    <parameter name="show_title" value = "show"/>
+                </depends>
+            </parameter>
+            <parameter name="side_title" xsi:type="select" visible="true" required="true" sort_order="30">
+                <label translate="true">Size title</label>
+                <depends>
+                    <parameter name="show_title" value = "show"/>
+                </depends>
+                <options>
+                    <option name="top" value="top" selected="true">
+                        <label>Top</label>
+                    </option>
+                    <option name="left" value="left">
+                        <label>Left</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="button_text" xsi:type="text" visible="true" required="true" sort_order="20">
+                <label translate="true">Button text</label>
+                <depends>
+                    <parameter name="side_title" value = "left"/>
+                </depends>
+            </parameter>
+            <parameter name="link" xsi:type="text" visible="true" required="true" sort_order="20">
+                <label translate="true">Link</label>
+                <depends>
+                    <parameter name="show_link" value = "show"/>
+                </depends>
+            </parameter>
+            <parameter name="text" xsi:type="text" visible="true" required="true" sort_order="20">
+                <label translate="true">Text</label>
+                <depends>
+                    <parameter name="show_text" value = "show"/>
+                </depends>
+            </parameter>
+
+
+        </parameters>
+    </widget>
+</widgets>
