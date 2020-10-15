@@ -4,61 +4,27 @@
         <label>My New Widget</label>
         <description>This is a test widget!!!</description>
         <parameters>
-            <parameter name="included" xsi:type="select" visible="true" required="true" sort_order="5">
-                <label translate="true">Included</label>
-                <options>
-                    <option name="Off" value="Off" selected="true">
-                        <label>Off</label>
-                    </option>
-                    <option name="On" value="On">
-                        <label>On</label>
-                    </option>
-                </options>
-            </parameter>
-
-            <parameter name="show_title" xsi:type="select" visible="true" required="true" sort_order="10">
+            <parameter name="show_fields" xsi:type="select" visible="true" required="true" sort_order="1">
                 <label translate="true">Show title</label>
                 <options>
-                    <option name="show" value="show" selected="true">
+                    <option name="show" value="1" selected="true">
                         <label>show</label>
                     </option>
-                    <option name="hide" value="hide">
+                    <option name="hide" value="0">
                         <label>hide</label>
                     </option>
                 </options>
             </parameter>
-            <parameter name="show_link" xsi:type="select" visible="true" required="true" sort_order="10">
-                <label translate="true">Show link</label>
-                <options>
-                    <option name="show" value="show" selected="true">
-                        <label>show</label>
-                    </option>
-                    <option name="hide" value="hide">
-                        <label>hide</label>
-                    </option>
-                </options>
-            </parameter>
-            <parameter name="show_text" xsi:type="select" visible="true" required="true" sort_order="10">
-                <label translate="true">Show text</label>
-                <options>
-                    <option name="show" value="show" selected="true">
-                        <label>show</label>
-                    </option>
-                    <option name="hide" value="hide">
-                        <label>hide</label>
-                    </option>
-                </options>
-            </parameter>
-            <parameter name="title" xsi:type="text" visible="true" required="true" sort_order="20">
+            <parameter name="title" xsi:type="text" visible="true" required="true" sort_order="2">
                 <label translate="true">Title</label>
                 <depends>
-                    <parameter name="show_title" value = "show"/>
+                    <parameter name="show_fields" value="1"/>
                 </depends>
             </parameter>
-            <parameter name="side_title" xsi:type="select" visible="true" required="true" sort_order="30">
+            <parameter name="side_title" xsi:type="select" visible="true" required="true" sort_order="3">
                 <label translate="true">Size title</label>
                 <depends>
-                    <parameter name="show_title" value = "show"/>
+                    <parameter name="show_fields" value="1"/>
                 </depends>
                 <options>
                     <option name="top" value="top" selected="true">
@@ -69,26 +35,25 @@
                     </option>
                 </options>
             </parameter>
-            <parameter name="button_text" xsi:type="text" visible="true" required="true" sort_order="20">
+            <parameter name="button_text" xsi:type="text" visible="true" required="true" sort_order="4">
                 <label translate="true">Button text</label>
                 <depends>
-                    <parameter name="side_title" value = "left"/>
+                    <parameter name="side_title" value="left"/>
+                    <parameter name="show_fields" value="1"/>
                 </depends>
             </parameter>
-            <parameter name="link" xsi:type="text" visible="true" required="true" sort_order="20">
+            <parameter name="link" xsi:type="text" visible="true" required="true" sort_order="5">
                 <label translate="true">Link</label>
                 <depends>
-                    <parameter name="show_link" value = "show"/>
+                    <parameter name="show_fields" value="1"/>
                 </depends>
             </parameter>
-            <parameter name="text" xsi:type="text" visible="true" required="true" sort_order="20">
+            <parameter name="text" xsi:type="text" visible="true" required="true" sort_order="6">
                 <label translate="true">Text</label>
                 <depends>
-                    <parameter name="show_text" value = "show"/>
+                    <parameter name="show_fields" value="1"/>
                 </depends>
             </parameter>
-
-
         </parameters>
     </widget>
 </widgets>

@@ -2,19 +2,15 @@
 /** \Vendor\Module\Block\Widget\Test $block */
 ?>
 <div class="content">
-    <?php if ($block->escapeHtml($block->getData('show_title'))): ?>
-        <div class=`<?= $block->escapeHtml($block->getData('side_title')) ?>`>
-            <?php if ($block->escapeHtml($block->getData('show_link'))): ?>
-                <a href=`<?= $block->escapeHtml($block->getData('link')) ?>`>
+    <?php if ($block->escapeHtml($block->getData('show_fields'))): ?>
+        <div class=<?= $block->escapeHtml($block->getData('side_title')) ?>>
+                <a href=<?= $block->escapeHtml($block->getData('link')) ?>>
                     <?= $block->escapeHtml($block->getData('title')) ?>
                 </a>
-            <?php else: ?>
-                <?= $block->escapeHtml($block->getData('title')) ?>
-            <?php endif ?>
         </div>
     <?php endif ?>
 
-    <?php if ($block->escapeHtml($block->getData('show_text'))): ?>
+    <?php if ($block->escapeHtml($block->getData('show_fields'))): ?>
         <?= $block->escapeHtml($block->getData('text')) ?>
     <?php endif ?>
 </div>
