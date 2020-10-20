@@ -1,0 +1,36 @@
+vmconf:
+  box: "ubuntu/bionic64"
+  machine_name: "magento2"
+  network_ip: "10.0.8.5"
+  memory: "4096"
+  cpus:  "2"
+  mount: "nfs"
+
+composer:
+  magento:
+    username: "6b0471b81002ced57fadcd674e8a4e22"
+    password: "a9a4a443645ea0417af3c9745002359d"
+
+server:
+  php_version: "7.2"
+  time_zone: "Europe/Kiev"
+  site_folder: "/var/www/magento"
+  php_debug_fpm_ip: "10.0.8.1"
+  php_debug_cli_ip: "10.0.2.2"
+
+magento:
+  url: "magento2.local"
+  url_aliases: "magento2.local"
+  mode: "developer"
+  edition: "community"
+  version: "2.3.2"
+  sample: "false"
+  install: "false"
+  currency: "EUR"
+  language: "en_US"
+  time_zone: "Europe/Minsk"
+
+db:
+  name: "magentodb"
+  user: "magento"
+  password: "magento"
