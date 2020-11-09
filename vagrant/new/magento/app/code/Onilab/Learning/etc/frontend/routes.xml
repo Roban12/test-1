@@ -6,8 +6,8 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
 	<router id="standard">
-		<route id="vendormodule" frontName="vendormodule">
-			<module name="Vendor_Module" />
+		<route id="onilabmodule" frontName="onilabmodule">
+			<module name="Onilab_Learning" />
 		</route>
 	</router>
 </config>
