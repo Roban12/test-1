@@ -6,7 +6,7 @@
 
 // @codingStandardsIgnoreFile
 
-/** @var \Vendor\Module\Block\Widget\Test $block */
+/** @var \Onilab\Learning\Block\Widget\Test $block */
 ?>
 <div class=<?= $block->escapeHtml($block->getData('side_title')) ?>>
     <?php if ($block->getData('show_fields')): ?>
@@ -151,32 +151,3 @@
         <?php endif ?>
     </div>
 </div>
-<style>
-    .left {
-        display: flex;
-        align-items: center;
-    }
-
-    .left .links {
-        margin-right: 20px;
-    }
-
-    .button {
-        background-color: #0d5aa7;
-        color: #fff;
-        padding: 10px 30px;
-        border: 1px solid #0d5aa7;
-        text-transform: none;
-    }
-
-    .button:visited {
-        color: #fff;
-    }
-
-    .button:hover {
-        background-color: #fff;
-        color: #0d5aa7 !important;
-        text-decoration: none;
-    }
-
-</style>

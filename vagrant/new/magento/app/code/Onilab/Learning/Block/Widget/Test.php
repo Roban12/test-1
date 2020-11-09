@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\Module\Block\Widget;
+namespace Onilab\Learning\Block\Widget;
 
 use Magento\CatalogWidget\Block\Product\ProductsList;
 use Magento\Widget\Block\BlockInterface;

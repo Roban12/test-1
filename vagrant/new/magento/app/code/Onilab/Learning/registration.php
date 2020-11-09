@@ -4,7 +4,7 @@
  */
 \Magento\Framework\Component\ComponentRegistrar::register(
 	\Magento\Framework\Component\ComponentRegistrar::MODULE,
-	'Vendor_Module',
+	'Onilab_Learning',
 	__DIR__
 );
 ?>
